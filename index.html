@@ -28,6 +28,7 @@
   </header>
 
   <main>
+    <!-- Her biri tam ekran sayfa bölümleri (dikey geçiş) -->
     <section id="home" class="page active">
       <div class="page-content">
         <h2>Hoşgeldiniz</h2>
@@ -49,45 +50,55 @@
       </div>
     </section>
 
-    <!-- İletişim Bölümü: İkonlar ve Profil Kartı -->
     <section id="contact" class="page">
       <div class="page-content">
         <h2>İletişim</h2>
-        <div class="contact-items">
-          <!-- LinkedIn -->
-          <div class="contact-item" data-info="linkedin">
-            <img src="linkedin-icon.png" alt="LinkedIn">
+        <!-- İletişim İkonları -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <img src="linkedin_icon.png" alt="LinkedIn">
             <span>LinkedIn</span>
-            <div class="contact-card">
-              <img src="your-profile.jpg" alt="Profil Fotoğrafı">
-              <p>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></p>
-              <p>[Adınız Soyadınız]</p>
-              <p>[Pozisyon/Unvan]</p>
+            <div class="profile-card">
+              <img src="profile_linkedin.jpg" alt="LinkedIn Profil">
+              <p>
+                LinkedIn: <a href="https://www.linkedin.com/in/username" target="_blank">linkedin.com/in/username</a>
+              </p>
             </div>
           </div>
-          <!-- Email -->
-          <div class="contact-item" data-info="email">
-            <img src="email-icon.png" alt="Email">
+          <div class="contact-item">
+            <img src="email_icon.png" alt="Email">
             <span>Email</span>
-            <div class="contact-card">
-              <img src="your-profile.jpg" alt="Profil Fotoğrafı">
-              <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-              <p>[Adınız Soyadınız]</p>
-              <p>[Pozisyon/Unvan]</p>
+            <div class="profile-card">
+              <img src="profile_email.jpg" alt="Email Profil">
+              <p>
+                Email: <a href="mailto:your.email@example.com">your.email@example.com</a>
+              </p>
             </div>
           </div>
-          <!-- GitHub -->
-          <div class="contact-item" data-info="github">
-            <img src="github-icon.png" alt="GitHub">
+          <div class="contact-item">
+            <img src="github_icon.png" alt="GitHub">
             <span>GitHub</span>
-            <div class="contact-card">
-              <img src="your-profile.jpg" alt="Profil Fotoğrafı">
-              <p>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></p>
-              <p>[Adınız Soyadınız]</p>
-              <p>[Pozisyon/Unvan]</p>
+            <div class="profile-card">
+              <img src="profile_github.jpg" alt="GitHub Profil">
+              <p>
+                GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a>
+              </p>
             </div>
           </div>
         </div>
+        <!-- İletişim Formu -->
+        <form id="contactForm">
+          <label for="name">İsim:</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="emailForm">Email:</label>
+          <input type="email" id="emailForm" name="email" required>
+          
+          <label for="message">Mesaj:</label>
+          <textarea id="message" name="message" required></textarea>
+          
+          <button type="submit">Gönder</button>
+        </form>
       </div>
     </section>
   </main>
