@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let isTransitioning = false;
     const transitionDuration = 600; // milisaniye
   
+    // Sayfa geçiş fonksiyonu (dikey swipe/scroll)
     function goToPage(newIndex) {
       if (isTransitioning || newIndex === currentIndex || newIndex < 0 || newIndex >= pages.length) return;
       isTransitioning = true;
   
-      // Navigasyon linklerini güncelle
+      // Navigasyon linklerinin aktif durumunu güncelle
       navLinks.forEach(link => link.classList.remove('active'));
       const targetId = pages[newIndex].id;
       document.querySelector(`nav ul li a[data-page="${targetId}"]`).classList.add('active');
@@ -17,15 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentPage = pages[currentIndex];
       const targetPage = pages[newIndex];
   
-      // Mevcut sayfayı animasyonla yukarıya ya da aşağıya taşı
+      // Geçiş yönüne göre mevcut sayfayı yukarı veya aşağı kaydır
       currentPage.classList.remove('active');
       currentPage.style.top = newIndex > currentIndex ? '-100%' : '100%';
       currentPage.style.opacity = '0';
   
-      // Hedef sayfayı animasyonla ekrana getir
+      // Hedef sayfayı hazırlayıp ekrana getir
       targetPage.classList.add('active');
       targetPage.style.top = newIndex > currentIndex ? '100%' : '-100%';
-      void targetPage.offsetWidth; // reflow tetikleme
+      void targetPage.offsetWidth; // Reflow tetikleme
       targetPage.style.top = '0';
       targetPage.style.opacity = '1';
   
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }, transitionDuration);
     }
   
-    // Fare tekerleği (wheel) ile sayfa geçişi
+    // Fare tekerleği ile sayfa geçişi
     window.addEventListener('wheel', (e) => {
       if (isTransitioning) return;
       if (e.deltaY > 0 && currentIndex < pages.length - 1) {
@@ -45,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   
-    // Navigasyon linklerine tıklanınca sayfa geçişi
+    // Navigasyon linklerine tıklayınca geçiş
     navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -53,6 +54,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const newIndex = Array.from(pages).findIndex(page => page.id === targetId);
         goToPage(newIndex);
       });
+    });
+  
+    // Mobil dokunmatik hareketleri için swipe algılama
+    let touchStartY = null;
+    window.addEventListener('touchstart', (e) => {
+      touchStartY = e.touches[0].clientY;
+    });
+    window.addEventListener('touchmove', (e) => {
+      if (!touchStartY) return;
+      let touchCurrentY = e.touches[0].clientY;
+      let diffY = touchStartY - touchCurrentY;
+      if (Math.abs(diffY) > 50) { // Eşik değeri
+        if (diffY > 0 && currentIndex < pages.length - 1) {
+          goToPage(currentIndex + 1);
+        } else if (diffY < 0 && currentIndex > 0) {
+          goToPage(currentIndex - 1);
+        }
+        touchStartY = null;
+      }
+    });
+    window.addEventListener('touchend', () => {
+      touchStartY = null;
     });
   
     // Tema Toggle İşlevselliği
@@ -66,6 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const theme = themeToggle.checked ? 'dark' : 'light';
       document.body.setAttribute('data-theme', theme);
       localStorage.setItem('theme', theme);
+    });
+  
+    // İletişim Formu İşlemi
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Mesajınız gönderildi!');
+      contactForm.reset();
     });
   });
   
