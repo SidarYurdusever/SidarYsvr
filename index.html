@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Tasarım - [Adınız Soyadınız]</title>
+  <!-- Modern görünüm için Roboto fontu -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="light">
+  <header>
+    <div class="header-container">
+      <h1 class="logo">[Adınız]</h1>
+      <nav>
+        <ul>
+          <li><a href="#" data-page="home" class="active">Ana Sayfa</a></li>
+          <li><a href="#" data-page="portfolio">Portfolyo</a></li>
+          <li><a href="#" data-page="resume">Özgeçmiş</a></li>
+          <li><a href="#" data-page="contact">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="theme-toggle">
+        <input type="checkbox" id="themeToggle">
+        <label for="themeToggle"></label>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="page active">
+      <div class="page-content">
+        <h2>Hoşgeldiniz</h2>
+        <p>Modern ve minimalist tasarımla sizi selamlıyoruz. Ben [Adınız Soyadınız].</p>
+      </div>
+    </section>
+
+    <section id="portfolio" class="page">
+      <div class="page-content">
+        <h2>Portfolyo</h2>
+        <p>Projelerim ve çalışmalarım burada yer alıyor.</p>
+      </div>
+    </section>
+
+    <section id="resume" class="page">
+      <div class="page-content">
+        <h2>Özgeçmiş</h2>
+        <p>Kariyerim ve yeteneklerim hakkında bilgi edinebilirsiniz.</p>
+      </div>
+    </section>
+
+    <!-- İletişim Bölümü: İkonlar ve Profil Kartı -->
+    <section id="contact" class="page">
+      <div class="page-content">
+        <h2>İletişim</h2>
+        <div class="contact-items">
+          <!-- LinkedIn -->
+          <div class="contact-item" data-info="linkedin">
+            <img src="linkedin-icon.png" alt="LinkedIn">
+            <span>LinkedIn</span>
+            <div class="contact-card">
+              <img src="your-profile.jpg" alt="Profil Fotoğrafı">
+              <p>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></p>
+              <p>[Adınız Soyadınız]</p>
+              <p>[Pozisyon/Unvan]</p>
+            </div>
+          </div>
+          <!-- Email -->
+          <div class="contact-item" data-info="email">
+            <img src="email-icon.png" alt="Email">
+            <span>Email</span>
+            <div class="contact-card">
+              <img src="your-profile.jpg" alt="Profil Fotoğrafı">
+              <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+              <p>[Adınız Soyadınız]</p>
+              <p>[Pozisyon/Unvan]</p>
+            </div>
+          </div>
+          <!-- GitHub -->
+          <div class="contact-item" data-info="github">
+            <img src="github-icon.png" alt="GitHub">
+            <span>GitHub</span>
+            <div class="contact-card">
+              <img src="your-profile.jpg" alt="Profil Fotoğrafı">
+              <p>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></p>
+              <p>[Adınız Soyadınız]</p>
+              <p>[Pozisyon/Unvan]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 [Adınız Soyadınız]. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
