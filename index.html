@@ -3,15 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Tasarım - [Adınız Soyadınız]</title>
-  <!-- Modern görünüm için Roboto fontu -->
+  <title>Sİdar Yurdusever</title>
+  <!-- Google Fonts: Roboto -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Ana CSS Dosyası -->
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="SStyles.css">
 </head>
 <body data-theme="light">
+
+  <!-- =====================================================
+       HEADER & NAVIGATION
+       ===================================================== -->
   <header>
     <div class="header-container">
-      <h1 class="logo">[Adınız]</h1>
+      <div class="dropdown">
+        <button class="btn-pulse">Sidar Yurdusever</button>
+        <div class="dropdown-content">
+          <a href="https://www.linkedin.com/in/sidar-yurdusever-286701332/" target="_blank">Linkedin</a>
+          <a href="https://github.com/SidarYurdusever" target="_blank">GitHub</a>
+          <a href="https://sidaryurdusever.github.io/SidarYsvr/" target="_blank">Portfolyo</a>
+        </div>
+      </div>
+      <!--<h1 class="logo">Sidar Yurdusever</h1>-->
       <nav>
         <ul>
           <li><a href="#" data-page="home" class="active">Ana Sayfa</a></li>
@@ -27,86 +41,262 @@
     </div>
   </header>
 
+  <!-- =====================================================
+       MAIN İÇERİK - SAYFA GEÇİŞLERİ (Tam Ekran Bölümler)
+       ===================================================== -->
   <main>
-    <!-- Her biri tam ekran sayfa bölümleri (dikey geçiş) -->
+    <!-- Home Page -->
     <section id="home" class="page active">
-      <div class="page-content">
-        <h2>Hoşgeldiniz</h2>
-        <p>Modern ve minimalist tasarımla sizi selamlıyoruz. Ben [Adınız Soyadınız].</p>
-      </div>
-    </section>
-
-    <section id="portfolio" class="page">
-      <div class="page-content">
-        <h2>Portfolyo</h2>
-        <p>Projelerim ve çalışmalarım burada yer alıyor.</p>
-      </div>
-    </section>
-
-    <section id="resume" class="page">
-      <div class="page-content">
-        <h2>Özgeçmiş</h2>
-        <p>Kariyerim ve yeteneklerim hakkında bilgi edinebilirsiniz.</p>
-      </div>
-    </section>
-
-    <section id="contact" class="page">
-      <div class="page-content">
-        <h2>İletişim</h2>
-        <!-- İletişim İkonları -->
-        <div class="contact-info">
-          <div class="contact-item">
-            <img src="linkedin_icon.png" alt="LinkedIn">
-            <span>LinkedIn</span>
-            <div class="profile-card">
-              <img src="profile_linkedin.jpg" alt="LinkedIn Profil">
-              <p>
-                LinkedIn: <a href="https://www.linkedin.com/in/username" target="_blank">linkedin.com/in/username</a>
-              </p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <img src="email_icon.png" alt="Email">
-            <span>Email</span>
-            <div class="profile-card">
-              <img src="profile_email.jpg" alt="Email Profil">
-              <p>
-                Email: <a href="mailto:your.email@example.com">your.email@example.com</a>
-              </p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <img src="github_icon.png" alt="GitHub">
-            <span>GitHub</span>
-            <div class="profile-card">
-              <img src="profile_github.jpg" alt="GitHub Profil">
-              <p>
-                GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a>
-              </p>
-            </div>
-          </div>
+      <div class="page-container">
+        <div class="page-content">
+          <h2>Hoşgeldiniz</h2>
+          <p>******************</p>
+          <h1>Kısa Bir Özet:</h1>
+          <p></p>
+            <p class="hosgeldiniz">
+            Merhaba! Ben Sidar Yurdusever, Bilgisayar mühendisliği öğrencisiyim. Özellikle güç elektroniği alanında yenilikçi projeler üretmeye ve mühendislik problemlerine yaratıcı çözümler geliştirmeye odaklanıyorum.
+            </p>
+            <p>******************</p>
+            <h1>İlgi Alanlarım:</h1>
+            <p></p>
+            <ul style="text-align: left; list-style-type:none; padding-left: 30%; cursor: pointer; ">
+              <li>- Elektronik Devreler</li>
+              <li>- Güç Elektroniği</li>
+              <li>- Simülasyon ve Modelleme</li>
+              <li>- Yazılım Geliştirme</li>
+            </ul>
+            <p></p>
+            <p>******************</p>
+            <p></p>
+            
+            
+            <p></p>
+            
         </div>
-        <!-- İletişim Formu -->
-        <form id="contactForm">
-          <label for="name">İsim:</label>
-          <input type="text" id="name" name="name" required>
+      </div>
+    </section>
+
+    <!-- Portfolio Page -->
+    <section id="portfolio" class="page">
+      <div class="page-container">
+        <div class="page-content">
+          <h2>Portfolyo</h2>
+          <p>Projelerim ve çalışmalarım burada yer alıyor.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Page -->
+    <section id="resume" class="page">
+      <div class="page-container">
+        <div class="page-content resume">
+          <h2>Özgeçmiş</h2>
           
-          <label for="emailForm">Email:</label>
-          <input type="email" id="emailForm" name="email" required>
+          <!-- Profil Özeti -->
+          <div class="profile-summary">
+            <div class="card-header">
+              <img src="profile_photo.jpg" alt="Profil Fotoğrafı">
+              <div class="personal-info">
+                <h3>John Doe</h3>
+                <p>Software Engineer | Tech Enthusiast</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Phone:</strong> +1 234 567 890</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>
+                Kısa profesyonel özet: 5 yıllık yazılım geliştirme deneyimine sahip, modern teknolojilerle projeler üreten, takım çalışmasına yatkın ve sürekli kendini geliştiren bir mühendis.
+              </p>
+            </div>
+            <a class="download-link" href="resume.pdf" download>Özgeçmişi İndir (PDF)</a>
+          </div>
           
-          <label for="message">Mesaj:</label>
-          <textarea id="message" name="message" required></textarea>
+          <!-- Eğitim Timeline -->
+          <div class="timeline education">
+            <h3>Eğitim</h3>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>Üniversite Adı</h4>
+                <span class="timeline-date">2015 - 2019</span>
+                <p>Bilgisayar Mühendisliği, Not Ortalaması: 3.8/4.0</p>
+              </div>
+            </div>
+            <!-- Ek eğitim öğeleri eklenebilir -->
+          </div>
           
-          <button type="submit">Gönder</button>
-        </form>
+          <!-- İş Deneyimi Timeline -->
+          <div class="timeline experience">
+            <h3>İş Deneyimi</h3>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <h4>XYZ Şirketi</h4>
+                <span class="timeline-date">2019 - Günümüz</span>
+                <p>Software Engineer - Backend geliştirme, API entegrasyonu ve bulut servisleri.</p>
+              </div>
+            </div>
+            <!-- Ek deneyim öğeleri eklenebilir -->
+          </div>
+          
+          <!-- Beceriler -->
+          <div class="skills">
+            <h3>Beceriler</h3>
+            <div class="skill-item">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 90%;"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Python</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 80%;"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">React</span>
+              <div class="skill-bar">
+                <div class="skill-level" style="width: 75%;"></div>
+              </div>
+            </div>
+            <!-- Diğer beceriler eklenebilir -->
+          </div>
+          
+          <!-- Sertifikalar & Kurslar -->
+          <div class="certifications">
+            <h3>Sertifikalar &amp; Kurslar</h3>
+            <div class="certification-item">
+              <h4>Front-End Web Developer</h4>
+              <p>Udacity, 2020</p>
+            </div>
+            <!-- Ek sertifika öğeleri eklenebilir -->
+          </div>
+          
+          <!-- Projeler -->
+          <div class="projects">
+            <h3>Projeler</h3>
+            <div class="project-item">
+              <h4>Proje Adı</h4>
+              <p>Kısa açıklama: Bu projede, modern web teknolojileri kullanarak dinamik ve kullanıcı odaklı bir uygulama geliştirdim.</p>
+            </div>
+            <!-- Diğer proje öğeleri eklenebilir -->
+          </div>
+          
+          <!-- Ek Bilgiler -->
+          <div class="additional-info">
+            <h3>Ek Bilgiler</h3>
+            <p>Dil Bilgisi: İngilizce (İleri seviye), İspanyolca (Orta seviye)</p>
+            <p>Gönüllü Çalışmalar, Hobiler: Fotoğrafçılık, Bisiklet Turu</p>
+          </div>
+          
+          <!-- Ek Kartlar Carousel (Sağa-Sola Kaydırma) -->
+          <div class="card-carousel">
+            <div class="carousel-container">
+              <div class="carousel-item">
+                <h4>Ek Kart 1</h4>
+                <p>Kart 1 açıklaması: Örneğin, ek proje detayları veya sertifika bilgileri.</p>
+              </div>
+              <div class="carousel-item">
+                <h4>Ek Kart 2</h4>
+                <p>Kart 2 açıklaması: İlgili deneyimler, ödüller veya ekstra bilgiler.</p>
+              </div>
+              <div class="carousel-item">
+                <h4>Ek Kart 3</h4>
+                <p>Kart 3 açıklaması: Diğer önemli bilgiler, örneğin gönüllü çalışmalar.</p>
+              </div>
+              <!-- İstediğiniz kadar ek kart ekleyebilirsiniz -->
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Page -->
+    <section id="contact" class="page">
+      <div class="page-container">
+        <div class="page-content">
+          <h2>İletişim</h2>
+          <!-- İletişim Bilgileri: İkonlar ve Detaylı Profil Kartları -->
+          <div class="contact-info">
+            <div class="contact-item">
+              <img src="linkedin_icon.png" alt="LinkedIn">
+              <span>LinkedIn</span>
+              <div class="profile-card">
+                <div class="card-header">
+                  <img src="profile_linkedin.jpg" alt="LinkedIn Profil">
+                  <h3>John Doe</h3>
+                </div>
+                <div class="card-body">
+                  <p><strong>Title:</strong> Software Engineer</p>
+                  <p><strong>Company:</strong> Tech Solutions Inc.</p>
+                  <p><strong>Location:</strong> New York, USA</p>
+                  <p><a href="https://www.linkedin.com/in/username" target="_blank">View Profile</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <img src="email_icon.png" alt="Email">
+              <span>Email</span>
+              <div class="profile-card">
+                <div class="card-header">
+                  <img src="profile_email.jpg" alt="Email Profil">
+                  <h3>John Doe</h3>
+                </div>
+                <div class="card-body">
+                  <p><strong>Email:</strong> john.doe@example.com</p>
+                  <p><strong>Phone:</strong> +1 234 567 890</p>
+                  <p><strong>Office:</strong> Main Branch</p>
+                  <p><a href="mailto:john.doe@example.com">Send Email</a></p>
+                </div>
+              </div>
+            </div>
+            <div class="contact-item">
+              <img src="github_icon.png" alt="GitHub">
+              <span>GitHub</span>
+              <div class="profile-card">
+                <div class="card-header">
+                  <img src="profile_github.jpg" alt="GitHub Profil">
+                  <h3>johndoe</h3>
+                </div>
+                <div class="card-body">
+                  <p><strong>Bio:</strong> Open source enthusiast &amp; developer</p>
+                  <p><strong>Repos:</strong> 42</p>
+                  <p><strong>Followers:</strong> 1200</p>
+                  <p><a href="https://github.com/username" target="_blank">View GitHub</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- İletişim Formu -->
+          <form id="contactForm">
+            <label for="name">İsim:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="emailForm">Email:</label>
+            <input type="email" id="emailForm" name="email" required>
+            
+            <label for="message">Mesaj:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Gönder</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
   <footer>
-    <p>&copy; 2025 [Adınız Soyadınız]. Tüm hakları saklıdır.</p>
+    <p style="background-color: transparent;">&copy; 2025 [Adınız Soyadınız]. Tüm hakları saklıdır.</p>
   </footer>
 
+  <!-- =====================================================
+       SCRIPT DOSYASI (script.js)
+       ===================================================== -->
   <script src="script.js"></script>
 </body>
 </html>
