@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidar Yurdusever - Portfolyo</title>
+    <!-- CSS Dosyası -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome (İkonlar için) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body> <!-- Tema sınıfı (dark-theme) buraya JS ile eklenecek -->
+
+    <!-- Header Alanı -->
+        <!-- Header Alanı (Mobil İçin Güncellendi) -->
+        <header>
+            <nav class="container">
+                <div class="logo">
+                    <a href="#hero">Sidar Yurdusever</a>
+                </div>
+    
+                <!-- Hamburger Menü Butonu (Sadece Mobilde Görünecek) -->
+                <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Menüyü Aç/Kapat" aria-expanded="false">
+                    <i class="fas fa-bars"></i> <!-- Hamburger ikonu -->
+                </button>
+    
+                <!-- Navigasyon Linkleri (Mobil için class eklendi) -->
+                <ul class="main-nav" id="main-navigation">
+                    <li><a href="#hero" class="nav-link">Anasayfa</a></li>
+                    <li><a href="#about" class="nav-link">Hakkımda</a></li>
+                    <li><a href="#projects" class="nav-link">Projeler</a></li>
+                    <li><a href="#contact" class="nav-link">İletişim</a></li>
+                </ul>
+    
+                <!-- Tema Değiştirme Butonu (Konumu aynı kalabilir veya menü içine alınabilir) -->
+                <button id="theme-toggle" aria-label="Tema Değiştir">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </header>
+
+    <!-- Ana İçerik Alanı -->
+    <main>
+
+        <!-- Hero Alanı (Dinamik Arka Planlı) -->
+        <section id="hero" class="hero-section">
+            <!-- Arka Plan Medyası Konteyneri -->
+            <div class="hero-background-media">
+                <!-- Başlangıçta gösterilecek resim (JS ile değiştirilecek) -->
+                <img src="images/hero-bg1.jpg" alt="Hero Arka Plan Resmi" class="hero-bg-image active">
+                <!-- Video elementi (JS ile kaynak atanacak ve aktif edilecek) -->
+                <video class="hero-bg-video" muted playsinline></video>
+            </div>
+            <!-- Hero İçeriği (Ön Planda) -->
+            <div class="container hero-content">
+                <h1>Merhaba, ben Sidar Yurdusever</h1>
+                <p>Tarsus Üniversitesi Bilgisayar Mühendisliği lisans öğrencisiyim.</p>
+                <a href="#projects" class="cta-button">Projelerimi Gör</a>
+            </div>
+        </section>
+
+        <!-- Hakkımda Alanı (Etkileşimli Yetenekler ile) -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2>Hakkımda</h2>
+                <!-- images klasörüne profil.jpg ekleyin -->
+                <img src="images/profil.jpg" alt="Profil Fotoğrafınız" class="profile-pic">
+                <p>
+                    Merhaba! Ben Sidar, Bilgisayar mühendisliği alanında tutkuyla çalışan bir öğrenciyim. Kendimi geliştirme konusunda çok yol aldım. Amacım, yeteneklerimi kullanarak yenilikçi projelere katkı sağlamak, kalıcı değer yaratmak. Projelerinizi hayata geçirmek veya potansiyel iş birliklerini görüşmek için benimle iletişime geçmekten çekinmeyin.
+                </p>
+                <!-- CV İndirme Butonu -->
+                <!-- files klasörü oluşturup cv.pdf (veya kendi dosyanızı) ekleyin -->
+                <a href="files/cv.pdf" download="AdinizSoyadiniz_CV.pdf" class="cv-button">
+                    <i class="fas fa-download"></i> CV İndir
+                </a>
+
+                <h3>Yeteneklerim</h3>
+                <!-- Etkileşimli Yetenekler Konteyneri -->
+                <div class="skills-container">
+                    <!-- Örnek Yetenek 1: HTML5 -->
+                    <div class="skill-item" data-level="95" data-tooltip="Web sayfalarının temel iskeletini ve içeriğini oluşturur. Semantik etiketler önemlidir.">
+                        <i class="fab fa-html5 skill-icon"></i>
+                        <div class="skill-details">
+                            <span class="skill-name">HTML5</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Örnek Yetenek 2: CSS3 -->
+                    <div class="skill-item" data-level="90" data-tooltip="Web sayfalarının görünümünü ve stilini belirler. Responsive tasarım ve animasyonlar için kullanılır.">
+                        <i class="fab fa-css3-alt skill-icon"></i>
+                        <div class="skill-details">
+                            <span class="skill-name">CSS3</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Örnek Yetenek 3: JavaScript -->
+                    <div class="skill-item" data-level="85" data-tooltip="Web sayfalarına etkileşim ve dinamik özellikler katar. DOM manipülasyonu ve API kullanımı.">
+                        <i class="fab fa-js skill-icon"></i>
+                        <div class="skill-details">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Örnek Yetenek 4: c -->
+                    <div class="skill-item" data-level="80" data-tooltip="Kullanıcı arayüzleri oluşturmak için popüler bir JavaScript kütüphanesi. Bileşen tabanlı mimari.">
+                        <i class="fab fa-react skill-icon"></i>
+                         <div class="skill-details">
+                            <span class="skill-name">C</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                     <!-- Örnek Yetenek 5: Java -->
+                    <div class="skill-item" data-level="70" data-tooltip="Sunucu taraflı JavaScript çalıştırma ortamı. API'ler ve backend servisleri geliştirmek için.">
+                        <i class="fab fa-node-js skill-icon"></i>
+                         <div class="skill-details">
+                            <span class="skill-name">Java</span>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                     <!-- Örnek Yetenek 6: Python -->
+                     <div class="skill-item" data-level="75" data-tooltip="Çok yönlü bir programlama dili. Web geliştirme (Django/Flask), veri bilimi, otomasyon.">
+                         <i class="fab fa-python skill-icon"></i>
+                         <div class="skill-details">
+                             <span class="skill-name">Python</span>
+                             <div class="progress-bar-container">
+                                 <div class="progress-bar"></div>
+                             </div>
+                         </div>
+                     </div>
+
+                    <!-- Örnek Yetenek 7: Veritabanı -->
+                     <div class="skill-item" data-level="70" data-tooltip="Veri depolama ve yönetimi. SQL (PostgreSQL, MySQL) ve NoSQL (MongoDB) veritabanları.">
+                         <i class="fas fa-database skill-icon"></i>
+                         <div class="skill-details">
+                             <span class="skill-name">Veritabanları (SQL/MySQL)</span>
+                             <div class="progress-bar-container">
+                                 <div class="progress-bar"></div>
+                             </div>
+                         </div>
+                     </div>
+
+                      <!-- Örnek Yetenek 8: Git -->
+                     <div class="skill-item" data-level="88" data-tooltip="Versiyon kontrol sistemi. Kod takibi, işbirliği ve dağıtım süreçleri için temel araç.">
+                         <i class="fab fa-git-alt skill-icon"></i>
+                         <div class="skill-details">
+                             <span class="skill-name">Git & GitHub</span>
+                             <div class="progress-bar-container">
+                                 <div class="progress-bar"></div>
+                             </div>
+                         </div>
+                     </div>
+
+                    <!-- Buraya kendi yeteneklerinizi veya daha fazlasını ekleyebilirsiniz -->
+                    <!-- Yeni yetenek eklemek için yukarıdaki 'skill-item' div yapısını kopyalayıp -->
+                    <!-- içeriğini (ikon sınıfı, data-level, data-tooltip, skill-name) değiştirin -->
+
+                </div> <!-- .skills-container sonu -->
+            </div>
+        </section>
+
+        <!-- Projeler Alanı (Video Hover Efektli) -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h2>Projelerim</h2>
+                <div class="projects-grid">
+
+                    <!-- Örnek Proje 1 -->
+                    <div class="project-card">
+                        <div class="project-media">
+                             <!-- images klasörüne proje1.jpg ekleyin -->
+                             <img src="images/proje1.jpg" alt="Proje 1 Resmi" class="project-image">
+                             <!-- videos klasörüne proje1.mp4 ekleyin (varsa) -->
+                             <video class="project-video" src="videos/proje1.mp4" muted playsinline poster="images/proje1.jpg"></video>
+                        </div>
+                        <div class="project-info">
+                             <h3>Otopark Takip Sistemi</h3>
+                             <p>Araçların girişini ve çıkışını takip eden bir sistem.
+                                <br> Kullanıcılar otoparkın kapasitesinin doluluk oranını görebilir.
+                                <br>=> Java, JFrame
+                             </p>
+                             <div class="project-links">
+                                 <!-- Linkleri kendi proje linklerinizle değiştirin -->
+                                 <a href="https://github.com/SidarYurdusever/Otopark-Sistemi" target="_blank">Canlı Demo</a>
+                                 <a href="https://github.com/SidarYurdusever/Otopark-Sistemi" target="_blank">Kod Deposu (GitHub)</a>
+                             </div>
+                        </div>
+                    </div>
+
+                    <!-- Örnek Proje 2 -->
+                    <div class="project-card">
+                         <div class="project-media">
+                              <!-- images klasörüne proje2.jpg ekleyin -->
+                              <img src="images/proje2.jpg" alt="Proje 2 Resmi" class="project-image">
+                              <!-- videos klasörüne proje2.mp4 ekleyin (varsa) -->
+                              <video class="project-video" src="videos/proje2.mp4" muted playsinline poster="images/proje2.jpg"></video>
+                         </div>
+                         <div class="project-info">
+                              <h3>Yapay Zeka Destekli Plaka Tanıma Sistemi</h3>
+                              <p>Kamera ile araç plakalarını tanıyan ve araç bilgilerini veren bir sistem.
+                                <br>=> Python, OpenCV, YOLO
+                              </p>
+                              <div class="project-links">
+                                  <a href="https://github.com/SidarYurdusever/PlakaTan-maSistemi-PTSAI-" target="_blank">Canlı Demo</a>
+                                  <a href="https://github.com/SidarYurdusever/PlakaTan-maSistemi-PTSAI-" target="_blank">Kod Deposu (GitHub)</a>
+                              </div>
+                         </div>
+                    </div>
+                    
+                    <!-- Daha fazla proje eklemek için yukarıdaki 'project-card' yapısını kopyalayıp içeriğini güncelleyin -->
+
+                </div> <!-- .projects-grid sonu -->
+            </div>
+        </section>
+
+        <!-- İletişim Alanı -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>İletişim</h2>
+                <p>Benimle iletişime geçmekten çekinmeyin! Aşağıdaki e-posta adresini kullanabilir veya sosyal medya hesaplarımdan ulaşabilirsiniz. Proje teklifleri, işbirliği veya sadece bir merhaba demek için buradayım.</p>
+                <!-- E-posta adresinizi güncelleyin -->
+                <a href="mailto:sidaryurdusever@gmail.com" class="email-link">sidaryurdusever@gmail.com</a>
+                <!-- İsteğe bağlı: Sosyal medya ikonları ve linkleri eklenebilir -->
+                
+                <div class="social-links">
+                    <a href="https://github.com/SidarYurdusever" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sidar-yurdusever-286701332/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Alanı -->
+    <footer>
+        <div class="container">
+            <p>© 2025 SidarYurdusever. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Dosyası -->
+    <script src="script.js"></script>
+</body>
+</html>
