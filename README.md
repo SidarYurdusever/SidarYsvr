@@ -16,12 +16,10 @@ Websitesi, modern web teknolojileri kullanılarak geliştirilmiş olup, dinamik 
 
 *   **Açık/Koyu Tema Desteği:** Kullanıcı tercihine göre arayüz temasını değiştirme ve bu tercihi tarayıcıda (`localStorage`) saklama.
 *   **Duyarlı Tasarım (Responsive):** Farklı ekran boyutlarına (masaüstü, tablet, mobil) uyum sağlayan yapı. Mobil cihazlar için hamburger menü.
-*   **Dinamik Hero Alanı:** Sayfa açılışında dikkat çekici, otomatik değişen resim ve video arka planları.
 *   **Etkileşimli Yetenekler Bölümü:** Yeteneklerin seviyesini gösteren ilerleme çubukları (sayfa kaydırıldığında animasyonla dolar) ve her yetenek için açıklayıcı bilgi kutucukları (tooltip).
 *   **Proje Kartları:** Projeleri listeleyen kartlar. Fare üzerine gelindiğinde proje ile ilgili kısa bir videonun (varsa) oynatılması.
 *   **CV İndirme:** Kullanıcının güncel CV'sini kolayca indirebilmesi için buton.
 *   **İletişim Bölümü:** E-posta adresi ve sosyal medya profillerine (GitHub, LinkedIn vb.) bağlantılar.
-*   **Yumuşak Kaydırma (Smooth Scroll):** Sayfa içi navigasyon linklerine tıklandığında ilgili bölüme akıcı bir geçiş.
 *   **Modern Arayüz:** CSS Değişkenleri, Flexbox ve Grid gibi modern CSS teknikleri ile oluşturulmuş temiz ve estetik tasarım.
 
 ---
@@ -37,53 +35,11 @@ Websitesi, modern web teknolojileri kullanılarak geliştirilmiş olup, dinamik 
 
 ---
 
-## Proje Yapısı
 
-/
-|-- index.html # Ana HTML dosyası
-|-- style.css # Ana stil dosyası
-|-- script.js # Ana JavaScript dosyası
-|-- images/ # Resim dosyalarının bulunduğu klasör
-| |-- hero-bg1.jpg
-| |-- hero-bg2.jpg
-| |-- hero-bg3.jpg
-| |-- profil.jpg
-| |-- proje1.jpg
-| |-- proje2.jpg
-| |-- ... (diğer gerekli resimler)
-|-- videos/ # Video dosyalarının bulunduğu klasör (Opsiyonel)
-| |-- hero-video1.mp4
-| |-- hero-video2.mp4
-| |-- hero-video3.mp4
-| |-- proje1.mp4
-| |-- proje2.mp4
-| |-- ... (diğer gerekli videolar)
-|-- files/ # İndirilebilir dosyaların bulunduğu klasör
-| |-- cv.pdf
-|-- README.md # Bu dosya
 
 
 **Not:** `videos` klasörü ve içindeki dosyalar, eğer projelerinizde veya hero alanında video kullanıyorsanız gereklidir. Kullanmıyorsanız bu klasöre ihtiyaç yoktur.
 
----
-
-## Kurulum ve Çalıştırma
-
-Bu proje tamamen frontend tabanlı olduğu için özel bir kurulum gerektirmez.
-
-1.  **Depoyu Klonlayın:**
-    ```bash
-    git clone https://github.com/SidarYurdusever/PORTFOLYO-REPO-ADINIZ.git
-    ```
-    *(`SidarYurdusever/PORTFOLYO-REPO-ADINIZ` kısmını kendi GitHub kullanıcı adınız ve repo adınızla değiştirin)*
-
-2.  **Klasöre Gidin:**
-    ```bash
-    cd PORTFOLYO-REPO-ADINIZ
-    ```
-
-3.  **Tarayıcıda Açın:**
-    `index.html` dosyasına çift tıklayarak veya dosya yolunu kopyalayıp web tarayıcınızın adres çubuğuna yapıştırarak siteyi yerel makinenizde görüntüleyebilirsiniz.
 
 ---
 
