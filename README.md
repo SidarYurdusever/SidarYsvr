@@ -8,7 +8,7 @@ Websitesi, modern web teknolojileri kullanılarak geliştirilmiş olup, dinamik 
 <!-- ![Portfolyo Ekran Görüntüsü](images/screenshot.png) -->
 
 <!-- Opsiyonel: Canlı demo linkini buraya ekleyebilirsiniz -->
-**Canlı Demo:** [https://sidaryurdusever.github.io/]([https://sidaryurdusever.github.io/](https://sidaryurdusever.github.io/SidarYsvr/)) <!-- Kendi GitHub Pages linkinizle değiştirin -->
+**Canlı Demo:** [https://sidaryurdusever.github.io/](https://sidaryurdusever.github.io/SidarYsvr/) <!-- Kendi GitHub Pages linkinizle değiştirin -->
 
 ---
 
